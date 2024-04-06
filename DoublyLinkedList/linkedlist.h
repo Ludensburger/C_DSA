@@ -186,9 +186,15 @@ public:
     }
 
     // Helper Functions
+    // Helper Functions
     int get(int pos) {
-        Node *curr = head;
-        int ctr = 1;
+        if (pos < 1 || pos > size) {
+            // Index out of bounds
+            return -1;
+        }
+
+        Node *curr = head->next;
+        int ctr = 1; // Starting from 0 instead of 1
         while (ctr != pos) {
             curr = curr->next;
             ctr++;
