@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     // Create a DynamicArrayList object
-    LinkedList *myList;
+    List *myList = new LinkedList();
 
     char op;
     int num;
