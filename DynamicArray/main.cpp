@@ -23,9 +23,17 @@ int main() {
     char op;
     int num;
 
+    cout << "Menu:" << endl;
+    cout << "a: Add an element to the list." << endl;
+    cout << "r: Remove an element from the list." << endl;
+    cout << "p: Print the list." << endl;
+    cout << "x: Exit the program." << endl;
+    cout << "Enter your choice: ";
+
     do {
 
         cout << "Op: ";
+
         cin >> op;
 
         switch (op) {
