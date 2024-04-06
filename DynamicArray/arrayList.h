@@ -5,4 +5,5 @@ public:
     virtual void remove(int index) = 0;
     virtual int get(int index) = 0;
     virtual int size() = 0;
+    virtual void print() = 0;
 };
