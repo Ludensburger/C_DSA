@@ -18,6 +18,9 @@ public:
         head = new Node();
         tail = new Node();
 
+        head->elem = 0; // Or some other default value
+        tail->elem = 0; // Or some other default value
+
         // so we start at
         // head's next and tail's prev
         head->next = tail;
@@ -29,14 +32,16 @@ public:
     // Utility function to add nodes
     // used by addFirst, addLast and addAt
     void addBetween(int elem, Node *pred, Node *succ) {
+        // Create a new Node
         Node *newNode = new Node();
         newNode->elem = elem;
-
         newNode->next = succ;
         newNode->prev = pred;
 
         pred->next = newNode;
         succ->prev = newNode;
+
+        size++;
     }
 
     void addFirst(int elem) {
@@ -215,7 +220,7 @@ public:
         curr = tail->prev;
         while (curr != head) {
             cout << curr->elem;
-            if (curr->next != tail) {
+            if (curr->prev != head) {
                 cout << " <- ";
             }
             curr = curr->prev;
