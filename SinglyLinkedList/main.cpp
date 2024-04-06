@@ -1,14 +1,16 @@
+// Author: Ryu R. Mendoza
+// Date: April 6, 2024
+
 #include "linkedlist.h"
 #include <iostream>
 using namespace std;
 
 int main() {
     // Create a DynamicArrayList object
-    List *myList = new LinkedList();
+    List *mySList = new LinkedList();
 
     char op;
-    int num;
-    int pos;
+    int num, pos;
 
     do {
 
@@ -22,7 +24,7 @@ int main() {
         case 'h':
 
             cin >> num;
-            myList->addHead(num);
+            mySList->addHead(num);
             break;
 
             // Add a new node to the tail (farthest right)
@@ -30,7 +32,7 @@ int main() {
         case 't':
 
             cin >> num;
-            myList->addTail(num);
+            mySList->addTail(num);
             break;
 
             // Remove a node from the list
@@ -38,18 +40,18 @@ int main() {
         case 'r':
 
             cin >> num;
-            cout << "Remove Position " << myList->remove(num) << endl;
+            cout << "Remove Position " << mySList->remove(num) << endl;
             break;
 
         case 'g':
 
             cin >> pos;
-            myList->get(pos);
+            mySList->get(pos);
             break;
 
             // Print the list
         case 'p':
-            myList->print();
+            mySList->print();
             break;
 
             // Exit the program
