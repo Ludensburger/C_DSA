@@ -28,7 +28,6 @@ int main() {
     cout << "r: Remove an element from the list." << endl;
     cout << "p: Print the list." << endl;
     cout << "x: Exit the program." << endl;
-    cout << "Enter your choice: ";
 
     do {
 
