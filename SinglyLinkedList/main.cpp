@@ -12,6 +12,15 @@ int main() {
     char op;
     int input, pos;
 
+    cout << "Menu:" << endl;
+    cout << "a: Add an element to the list." << endl;
+    cout << "h: Add an element to the head of the list." << endl;
+    cout << "t: Add an element to the tail of the list." << endl;
+    cout << "g: Get an element from a specific position in the list." << endl;
+    cout << "r: Remove an element from the list by value." << endl;
+    cout << "p: Print the list." << endl;
+    cout << "x: Exit the program." << endl;
+
     do {
         cout << "Op: ";
         cin >> op;
