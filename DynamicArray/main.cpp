@@ -18,7 +18,7 @@ using namespace std;
 
 int main() {
     // Create a DynamicArrayList object
-    DynamicArrayList myList;
+    DynamicArrayList *myList;
 
     char op;
     int num;
@@ -34,18 +34,18 @@ int main() {
         case 'a':
 
             cin >> num;
-            myList.add(num);
+            myList->add(num);
             break;
 
             // Sample Input: r10
         case 'r':
 
             cin >> num;
-            myList.remove(num);
+            myList->remove(num);
             break;
 
         case 'p':
-            myList.print();
+            myList->print();
             break;
 
         case 'x':
