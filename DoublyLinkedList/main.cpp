@@ -49,8 +49,8 @@ int main() {
             myDList->removeLast();
             break;
         case 'g':
-            cin >> num;
-            cout << myDList->get(num) << endl;
+            cin >> pos;
+            cout << "Element at position " << pos << ": " << myDList->get(pos) << endl;
             break;
         case 'p':
             myDList->print();
