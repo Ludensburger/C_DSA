@@ -87,7 +87,7 @@ public:
     }
 
     void print() {
-        for (int i = 0; i < 5; i++) // Always print at least 5 elements
+        for (int i = 0; i < currentSize; i++) // Always print at least 5 elements
         {
             if (i < currentSize) {
                 cout << arr[i] << " ";
