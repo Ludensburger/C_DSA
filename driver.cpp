@@ -1,4 +1,14 @@
-#include <cstdlib> // For system("cls") to clear the screen
+// Author: Ryu R. Mendoza
+// Date: April 6, 2024
+
+// Description: Main Driver program that displays a menu of options for the user to choose from and use the Data Structures.
+// The user can select from the following options:
+// 1. Dynamic Array List
+// 2. Singly Linked List
+// 3. Doubly Linked List
+// 4. Exit
+
+#include <cstdlib>
 #include <iostream>
 using namespace std;
 
