@@ -6,8 +6,7 @@
 
 int main() {
     LinkedList *myDList = new LinkedList();
-    int num;
-    int pos;
+    int num, pos;
     char op;
 
     do {
