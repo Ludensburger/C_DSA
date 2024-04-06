@@ -43,7 +43,7 @@ int main() {
             break;
         case 'g':
             cin >> pos;
-            mySList->get(pos);
+            cout << "Element at position " << mySList->get(pos) << endl;
             break;
         case 'r':
             cin >> input;
