@@ -21,11 +21,12 @@ int main() {
     ArrayList *myList = new DynamicArrayList();
 
     char op;
-    int num;
+    int num, pos;
 
     cout << "Menu:" << endl;
     cout << "a: Add an element to the list." << endl;
     cout << "r: Remove an element from the list." << endl;
+    cout << "g: Get the position of an element in the list. (zero-based)" << endl;
     cout << "p: Print the list." << endl;
     cout << "x: Exit the program." << endl;
 
@@ -50,6 +51,10 @@ int main() {
             cin >> num;
             myList->remove(num);
             break;
+
+        case 'g':
+            cin >> pos;
+            cout << "Element at position " << pos << ": " << myList->get(pos) << endl;
 
         case 'p':
             myList->print();
