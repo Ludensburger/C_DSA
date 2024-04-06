@@ -6,63 +6,46 @@
 using namespace std;
 
 int main() {
-    // Create a DynamicArrayList object
+
     List *mySList = new LinkedList();
 
     char op;
-    int num, pos;
+    int input, pos;
 
     do {
-
         cout << "Op: ";
         cin >> op;
 
         switch (op) {
 
-            // Add a new node to the head (farthest left)
-            // Sample Input: h10
+            // Add case a first before executing other cases
+        case 'a':
+            cin >> input;
+            mySList->add(input);
+
+            break;
         case 'h':
-
-            cin >> num;
-            mySList->addHead(num);
+            cin >> input;
+            mySList->addHead(input);
             break;
-
-            // Add a new node to the tail (farthest right)
-            // Sample Input: h10
         case 't':
-
-            cin >> num;
-            mySList->addTail(num);
+            cin >> input;
+            mySList->addTail(input);
             break;
-
-            // Remove a node from the list
-            // Sample Input: h20
-        case 'r':
-
-            cin >> num;
-            cout << "Remove Position " << mySList->remove(num) << endl;
-            break;
-
         case 'g':
-
             cin >> pos;
             mySList->get(pos);
             break;
+        case 'r':
+            cin >> input;
+            cout << "Remove position " << mySList->remove(input) << endl;
+            break;
 
-            // Print the list
         case 'p':
             mySList->print();
             break;
-
-            // Exit the program
-        case 'x':
-            cout << "Exiting program." << endl;
-            break;
-
-        default:
-            cout << "Invalid operation." << endl;
-            break;
         }
+
     } while (op != 'x');
 
     return 0;
