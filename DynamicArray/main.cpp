@@ -18,7 +18,7 @@ using namespace std;
 
 int main() {
     // Create a DynamicArrayList object
-    DynamicArrayList *myList;
+    ArrayList *myList = new DynamicArrayList();
 
     char op;
     int num;
