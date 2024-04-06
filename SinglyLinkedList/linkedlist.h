@@ -4,24 +4,23 @@
 using namespace std;
 
 class LinkedList : public List {
-public:
+
     Node *head;
     Node *tail;
     int size;
 
-    // Base function
-    // Add a new node to the farthest right
     void add(int num) {
-        Node *newNode = new Node;
+        Node *newNode = (Node *)calloc(1, sizeof(Node));
         newNode->elem = num;
 
+        // sets the initial new node as both the head and the tail
         if (size == 0) {
-            // Set new node as both head and tail
             head = newNode;
             tail = newNode;
+
+            // if there's an existing node, insert it to the right (after the current head)
+            // then connect current tail to the new node, and update new node as new tail.
         } else {
-            // Insert new node to the right of the current tail
-            // Update new node as tail
             tail->next = newNode;
             tail = newNode;
         }
@@ -29,20 +28,23 @@ public:
         size++;
     }
 
-    // Add a new node to the farthest left
     void addHead(int num) {
 
         Node *newNode = new Node;
         newNode->elem = num;
 
         if (size == 0) {
-            // Set new node as both head and tail
             head = newNode;
             tail = newNode;
+
         } else {
-            // Insert new node to the left of the current head
-            // Update new node as head
+
+            // Insert new node before the head, so that is the farthest left
+            // then connect new Node to the current head
+
             newNode->next = head;
+
+            // Then update new Node as the new head
             head = newNode;
         }
 
@@ -50,32 +52,29 @@ public:
     }
 
     void addTail(int num) {
-        // Call add method since it always adds a new node to the farthest right
-        // That means it adds after the tail
+
+        // Call method add since it always adds a new node to the farthest right,
+        // that means it adds after the tail
         add(num);
     }
 
     int get(int pos) {
-
-        // If the list is empty, return -1
         if (size == 0) {
-            cout << "List is Empty" << endl;
-            return -1;
+            cout << "Nothing to get" << endl;
 
+            return 0;
         }
-        // If the position is out of bounds, return -1
-        else if (pos > size) {
+
+        if (pos > size) {
             cout << "Out of bounds" << endl;
             return -1;
 
-        }
-
-        // If the position is within bounds, return the element at that position
-        else {
+        } else {
             Node *curr = head;
             int ctr = 1;
 
             while (ctr < pos) {
+
                 curr = curr->next;
                 ctr++;
             }
@@ -83,52 +82,27 @@ public:
             return curr->elem;
         }
     }
-
     int remove(int num) {
-
         Node *curr = head;
         Node *prev;
         int ctr = 1;
-        // If the list is empty, return -1
-        if (size == 0) {
-            cout << "List is Empty" << endl;
-            return -1;
-        }
-
-        // Traverse the list
         while (curr) {
-            // If the element is found
             if (curr->elem == num) {
-
-                // check if the element is the head
-                // then Just update head to the next node
                 if (curr == head) {
                     head = head->next;
-                }
-
-                // check if the element is the tail
-                // then update tail to the previous node
-                else {
+                } else {
                     if (curr == tail) {
                         tail = prev;
                     }
-                    // if the element is in the middle
-                    // then update the previous node's next to the current node's next
-                    // effectively removing the current node
                     prev->next = curr->next;
                 }
-
-                // Decrement Size and return the removed element's position
                 size--;
                 return ctr;
             }
-
             prev = curr;
             curr = curr->next;
             ctr++;
         }
-
-        // if the element is not found, return -1
         return -1;
     }
 
@@ -136,24 +110,22 @@ public:
         Node *curr = head;
         if (size == 0) {
             cout << "eMpTy" << endl;
-        }
-
-        else {
+        } else {
 
             do {
                 // Print the element
                 cout << curr->elem;
 
                 // check if next node is not a nullptr
-                // this is similar to commas in Arrays
                 if (curr->next) {
                     cout << " -> ";
-                    // So if theres no next node, print a new line instead
                 } else {
                     cout << endl;
                 }
-                // Update current to next node
+                // update current to next node
+
                 curr = curr->next;
+
             } while (curr);
         }
     }
