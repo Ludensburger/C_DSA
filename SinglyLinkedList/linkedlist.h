@@ -61,27 +61,26 @@ class LinkedList : public List {
     int get(int pos) {
         if (size == 0) {
             cout << "Nothing to get" << endl;
-
             return 0;
         }
 
         if (pos > size) {
             cout << "Out of bounds" << endl;
             return -1;
-
         } else {
             Node *curr = head;
             int ctr = 1;
 
             while (ctr < pos) {
-
                 curr = curr->next;
                 ctr++;
             }
 
+            // Return the value of the node at the given position
             return curr->elem;
         }
     }
+
     int remove(int num) {
         Node *curr = head;
         Node *prev;
