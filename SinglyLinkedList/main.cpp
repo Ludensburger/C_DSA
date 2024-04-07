@@ -5,7 +5,8 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
 
     List *mySList = new LinkedList();
 
@@ -21,11 +22,13 @@ int main() {
     cout << "p: Print the list." << endl;
     cout << "x: Exit the program." << endl;
 
-    do {
+    do
+    {
         cout << "Op: ";
         cin >> op;
 
-        switch (op) {
+        switch (op)
+        {
 
             // Add case a first before executing other cases
         case 'a':
@@ -56,6 +59,8 @@ int main() {
         }
 
     } while (op != 'x');
+
+    delete mySList;
 
     return 0;
 }
