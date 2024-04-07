@@ -23,17 +23,23 @@ int main()
         switch (op)
         {
         case 'a':
+            cin >> num;
             myQueue->enqueue(num);
+
             break;
 
         case 'r':
-            cout << "Dequeued: " << myQueue->dequeue() << endl;
+            num = myQueue->dequeue();
+            if (num != -1)
+            {
+                cout << "Dequeued: " << num << endl;
+            }
             break;
 
         case 'p':
             myQueue->print();
-
             break;
+
         case 'x':
             cout << "Exiting program." << endl;
             break;
