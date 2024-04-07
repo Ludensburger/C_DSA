@@ -16,7 +16,8 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
     // Create a DynamicArrayList object
     ArrayList *myList = new DynamicArrayList();
 
@@ -30,13 +31,15 @@ int main() {
     cout << "p: Print the list." << endl;
     cout << "x: Exit the program." << endl;
 
-    do {
+    do
+    {
 
         cout << "Op: ";
 
         cin >> op;
 
-        switch (op) {
+        switch (op)
+        {
 
             // Sample Input: a10
         case 'a':
@@ -69,6 +72,8 @@ int main() {
             break;
         }
     } while (op != 'x');
+
+    delete myList;
 
     return 0;
 }
