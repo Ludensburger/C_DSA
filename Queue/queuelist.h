@@ -27,6 +27,7 @@ public:
     {
         Node *newNode = new Node;
         newNode->elem = num;
+        newNode->next = nullptr;
 
         if (queueSize == 0)
         {
