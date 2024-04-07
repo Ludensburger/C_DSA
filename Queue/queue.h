@@ -2,7 +2,7 @@
 
 class Queue
 {
-
+public:
     // We can visualize the Queue in a horizontal list manner like this:
     // the REAR (INSERTION) is at the RIGHTMOST position or the last node
     // the FRONT (REMOVAL) is at the LEFTMOST position or the first node
