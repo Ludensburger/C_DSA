@@ -30,7 +30,7 @@ int main()
             myStack->push(num);
             break;
         case 'r':
-            myStack->pop();
+            cout << "Popped: " << myStack->pop() << endl;
             break;
         case 'p':
             myStack->print();
