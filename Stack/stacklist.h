@@ -18,7 +18,7 @@ public:
         topNode = nullptr;
     }
 
-    int isEmpty()
+    bool isEmpty()
     {
         return topNode == nullptr;
     }
