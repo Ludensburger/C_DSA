@@ -11,6 +11,8 @@ int main()
     cout << "\nMenu:\n";
     cout << "a: Enqueue an element\n";
     cout << "r: Dequeue an element\n";
+    cout << "f: Check the Front element.\n";
+    cout << "?: Check if Queue is Empty.\n";
     cout << "p: Print the queue\n";
     cout << "x: Exit the program\n";
 
@@ -37,7 +39,7 @@ int main()
             break;
 
         case 'f':
-            cout << "Front: " << myQueue->front();
+            cout << "Front: " << myQueue->front() << endl;
             break;
 
         case '?':
