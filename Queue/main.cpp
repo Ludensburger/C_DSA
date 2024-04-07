@@ -36,6 +36,22 @@ int main()
             }
             break;
 
+        case 'f':
+            cout << "Front: " << myQueue->front();
+            break;
+
+        case '?':
+            cout << "Empty? ";
+            if (myQueue->isEmpty())
+            {
+                cout << "Yes" << endl;
+            }
+            else
+            {
+                cout << "No" << endl;
+            }
+            break;
+
         case 'p':
             myQueue->print();
             break;
