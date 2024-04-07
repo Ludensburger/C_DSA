@@ -4,7 +4,8 @@
 #include "linkedlist.h"
 #include <iostream>
 
-int main() {
+int main()
+{
     LinkedList *myDList = new LinkedList();
     int num, pos;
     char op;
@@ -20,11 +21,13 @@ int main() {
     cout << "p: Print the list." << endl;
     cout << "x: Exit the program." << endl;
 
-    do {
+    do
+    {
         cout << "Op: ";
         cin >> op;
 
-        switch (op) {
+        switch (op)
+        {
 
         case 'h':
             cin >> num;
