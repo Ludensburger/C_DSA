@@ -45,9 +45,17 @@ int main() {
             // Code to run the Doubly Linked List program
             system("\"C:\\Users\\hp\\Desktop\\Ryu Files\\Codes\\C-Programming\\CPP\\C_DataStructures\\DoublyLinkedList\\main.exe\"");
             break;
+
         case 4:
+            cout << "Running Hash Table program..." << endl;
+            // Code to run the Hash Table program
+            system("\"C:\\Users\\hp\\Desktop\\Ryu Files\\Codes\\C-Programming\\CPP\\C_DataStructures\\HashTable\\main.exe\"");
+            break;
+
+        case 5:
             cout << "Exiting program." << endl;
             break;
+
         default:
             cout << "Invalid choice. Please enter a valid option." << endl;
         }
@@ -60,7 +68,7 @@ int main() {
         // Clear the screen before displaying the menu again
         system("cls");
 
-    } while (choice != 4);
+    } while (choice != 5);
 
     return 0;
 }
