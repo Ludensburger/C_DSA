@@ -85,7 +85,7 @@ int main() {
             lp->insert(3, 30);
             lp->insert(4, 40);
 
-            // putang ina theres a bug, dapat sa sentinel 7 ning boang
+            // putang ina theres a bug, dapat sa sentinel 7 ning boang FIXED
             // cout << "GUBA ";
             lp->insert(1567, 79);
             // cout << endl;
