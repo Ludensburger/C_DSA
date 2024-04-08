@@ -21,8 +21,10 @@ int main() {
         cout << "1. Dynamic Array List" << endl;
         cout << "2. Singly Linked List" << endl;
         cout << "3. Doubly Linked List" << endl;
-        cout << "4. Hash Table" << endl;
-        cout << "5. Exit" << endl;
+        cout << "4. Stack" << endl;
+        cout << "5. Queue" << endl;
+        cout << "6. Hash Table" << endl;
+        cout << "7. Exit" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -48,12 +50,25 @@ int main() {
             break;
 
         case 4:
+            cout << "Running Stack program..." << endl;
+            // Code to run the Stack program
+            system("\"C:\\Users\\hp\\Desktop\\Ryu Files\\Codes\\C-Programming\\CPP\\C_DataStructures\\Stack\\main.exe\"");
+            break;
+
+        case 5:
+            cout << "Running Queue program..." << endl;
+            // Code to run the Queue program
+            system("\"C:\\Users\\hp\\Desktop\\Ryu Files\\Codes\\C-Programming\\CPP\\C_DataStructures\\Queue\\main.exe\"");
+
+            break;
+
+        case 6:
             cout << "Running Hash Table program..." << endl;
             // Code to run the Hash Table program
             system("\"C:\\Users\\hp\\Desktop\\Ryu Files\\Codes\\C-Programming\\CPP\\C_DataStructures\\HashTable\\main.exe\"");
             break;
 
-        case 5:
+        case 7:
             cout << "Exiting program." << endl;
             break;
 
@@ -69,7 +84,7 @@ int main() {
         // Clear the screen before displaying the menu again
         system("cls");
 
-    } while (choice != 5);
+    } while (choice != 7);
 
     return 0;
 }
