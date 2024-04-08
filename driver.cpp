@@ -21,7 +21,8 @@ int main() {
         cout << "1. Dynamic Array List" << endl;
         cout << "2. Singly Linked List" << endl;
         cout << "3. Doubly Linked List" << endl;
-        cout << "4. Exit" << endl;
+        cout << "4. Hash Table" << endl;
+        cout << "5. Exit" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
 
