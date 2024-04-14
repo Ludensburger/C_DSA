@@ -9,7 +9,7 @@ This repository contains implementations of various data structures in C++, incl
 - **Doubly Linked List:** Similar to a singly linked list, but each element also points to the previous element.
 - **Stack:** A Last In, First Out (LIFO) data structure that supports push and pop operations.
 - **Queue:** A First In, First Out (FIFO) data structure that supports enqueue and dequeue operations.
-- **HashMap:** A custom implementation utilizing an array of nodes, where each node holds a key and a linked list of values associated with that key.
+- **HashMap (Open Hashing):** This custom implementation utilizes open hashing, also known as separate chaining, where an array of nodes is employed. Each node holds a key and a linked list of values associated with that key.
 
 ## Usage:
 
